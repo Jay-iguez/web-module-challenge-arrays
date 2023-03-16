@@ -179,8 +179,16 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(condensedArray, string){
+
+  const filterArray = []
+
+  for (let i = 0; i < condensedArray.length; i++) {
+    if (condensedArray[i].includes(string)) {
+      filterArray.push(condensedArray[i])
+    } else console.log("Not here")
+  }
+    return filterArray
 }
 
 
