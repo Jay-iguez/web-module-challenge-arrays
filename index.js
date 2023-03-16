@@ -83,10 +83,14 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
+let newFlavor = "Rainbow Sherbert"
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(originalFlavors, newFlavor){
+  originalFlavors.unshift(newFlavor)
+  return originalFlavors
  }
+
+console.log(`Task 3: `, addFlavor(originalFlavors, newFlavor))
 
 
 
@@ -102,9 +106,12 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(changedArray){
+  changedArray.pop()
+  return changedArray
 }
+
+console.log(`Task 4: `, removeLastFlavor(originalFlavors))
 
 
 
@@ -119,11 +126,11 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(flavorArray, num){
+  return flavorArray[num]
 }
 
+console.log(`Task 5: `, getFlavorByIndex(originalFlavors, 2))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -140,10 +147,17 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(filterArray, string){
+
+  for (let i = 0; i < filterArray.length; i++) {
+    if (filterArray[i] === string) {
+        filterArray.splice(i, 1)
+        return filterArray
+    } else console.log("Still looking...")
+  } 
 }
 
+console.log(`Task 6:`, removeFlavorByName(originalFlavors, "Eggnog"))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
