@@ -191,6 +191,8 @@ function filterByWord(condensedArray, string){
     return filterArray
 }
 
+console.log(`Task 7: `, filterByWord(originalFlavors, "Coffee"))
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
