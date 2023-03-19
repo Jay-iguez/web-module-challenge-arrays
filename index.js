@@ -35,6 +35,85 @@ const originalFlavors = [
   "Vanilla Burnt Almond"
 ]
 
+ const newFlavors = [
+   "Date night",
+   "U.S.S Butterscotch (Stranger Things special)",
+   "Honey Almond",
+   "Mint Chocolate Chip",
+   "Chocolate",
+   "Oreo® Cookies'n Cream",
+   "Chocolate Chip",
+   "Pralines 'n Cream",
+   "Very Berry Strawberry",
+   "Chocolate Chip Cookie Dough",
+   "Old Fashioned Butter Pecan",
+   "Jamoca®",
+   "Jamoca® Almond Fudge",
+   "Reese's® Peanut Butter Cup",
+   "Rocky Road",
+   "Peanut Butter ’n Chocolate",
+   "Gold Medal Ribbon®",
+   "World Class® Chocolate",
+   "Cherries Jubilee",
+   "Chocolate Fudge",
+   "Daiquiri Ice",
+   "Rainbow Sherbet",
+   "Rainbow Swirl"
+ ] 
+
+ const seasonalFlavors = [
+   "America's Birthday Cake",
+   "Baseball Nut®",
+   "Blueberry Cheesecake",
+   "Bourbon Street Pecan Pie",
+   "Brownie Bar Mashup",
+   "Cherry Cordial with Kisses",
+   "Chocolate Mousse Royale",
+   "French Vanilla",
+   "Eggnog",
+   "German Chocolate Cake",
+   "Icing on the Cake",
+   "Love Potion #31",
+   "New York Cheesecake",
+   "Nutty Coconut",
+   "Peppermint",
+   "Strawberry Cheesecake",
+   "Rock ’n Pop Swirl",
+   "Reese’s Peanut Butter Cup",
+   "Trick Oreo Treat",
+   "Winter White Chocolate",
+   "made with Snickers®",
+   "made with M&M's®",
+   "Heath®",
+   "Mango Tango"
+ ]
+
+ const regionalFlavors = [
+   "Pink Bubblegum",
+   "Caramel Macchiato",
+   "York Peppermint Pattie",
+   "Cotton Candy",
+   "Orange Sherbet",
+   "Grape Ice",
+   "Watermelon Ice",
+   "Miami Vice Sorbet",
+   "Splish Splash®",
+   "Wild 'n Reckless Sherbet",
+   "Lemon Custard",
+   "Oregon Blackberry",
+   "Bananas ‘n Strawberries",
+   "Mississippi Mud",
+   "Rum Raisin",
+   "Creole Cream Cheese",
+   "Chocolate Almond",
+   "Fudge Brownie",
+   "Banana Nut",
+   "Black Walnut",
+   "Cotton Candy Crackle",
+   "Quarterback Crunch",
+   "Chocolate Chocolate Chip Cheesecake",
+   "Caramel 'n' Cookies"
+ ]
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 We have an array called originalFlavors with 31 flavors (see above).  In these tasks, we will be reading and writing data to this array.  
 With all of these changes going on, we don't want to lose track of the actual, original 31 flavors.  So we need to copy the original array!
@@ -186,7 +265,7 @@ function filterByWord(condensedArray, string){
   for (let i = 0; i < condensedArray.length; i++) {
     if (condensedArray[i].includes(string)) {
       filterArray.push(condensedArray[i])
-    } else console.log("Not here")
+    }
   }
     return filterArray
 }
@@ -207,9 +286,19 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-  /*code here*/
+function getAverageWordLength(array){
+  const countArray = []
+  let amount = 0
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].includes(" ")) {
+      amount = array[i].includes(" ").length
+      countArray.push(amount)
+    }
+  }
+    return countArray
 }
+
+console.log(`Hey`, getAverageWordLength(originalFlavors))
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
@@ -225,90 +314,48 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-  /*code here*/
-}
+function getRandomFlavors(one, two, three, four){
 
-// NEW DATA ARRAYS FOR STRETCH 2 ⬇️
-// const newFlavors = [
-//   "Date night",
-//   "U.S.S Butterscotch (Stranger Things special)",
-//   "Honey Almond",
-//   "Mint Chocolate Chip",
-//   "Chocolate",
-//   "Oreo® Cookies'n Cream",
-//   "Chocolate Chip",
-//   "Pralines 'n Cream",
-//   "Very Berry Strawberry",
-//   "Chocolate Chip Cookie Dough",
-//   "Old Fashioned Butter Pecan",
-//   "Jamoca®",
-//   "Jamoca® Almond Fudge",
-//   "Reese's® Peanut Butter Cup",
-//   "Rocky Road",
-//   "Peanut Butter ’n Chocolate",
-//   "Gold Medal Ribbon®",
-//   "World Class® Chocolate",
-//   "Cherries Jubilee",
-//   "Chocolate Fudge",
-//   "Daiquiri Ice",
-//   "Rainbow Sherbet",
-//   "Rainbow Swirl"
-// ] 
+  const check = []
+  const getRandom = []
 
-// const seasonalFlavors = [
-//   "America's Birthday Cake",
-//   "Baseball Nut®",
-//   "Blueberry Cheesecake",
-//   "Bourbon Street Pecan Pie",
-//   "Brownie Bar Mashup",
-//   "Cherry Cordial with Kisses",
-//   "Chocolate Mousse Royale",
-//   "French Vanilla",
-//   "Eggnog",
-//   "German Chocolate Cake",
-//   "Icing on the Cake",
-//   "Love Potion #31",
-//   "New York Cheesecake",
-//   "Nutty Coconut",
-//   "Peppermint",
-//   "Strawberry Cheesecake",
-//   "Rock ’n Pop Swirl",
-//   "Reese’s Peanut Butter Cup",
-//   "Trick Oreo Treat",
-//   "Winter White Chocolate",
-//   "made with Snickers®",
-//   "made with M&M's®",
-//   "Heath®",
-//   "Mango Tango"
-// ]
+  while (getRandom.length < 32) {
+  let randomIndexOne = Math.floor(Math.random() * one.length)
+  let randomIndexTwo = Math.floor(Math.random() * two.length)
+  let randomIndexThree = Math.floor(Math.random() * three.length)
+  let randomIndexFour = Math.floor(Math.random() * four.length)
 
-// const regionalFlavors = [
-//   "Pink Bubblegum",
-//   "Caramel Macchiato",
-//   "York Peppermint Pattie",
-//   "Cotton Candy",
-//   "Orange Sherbet",
-//   "Grape Ice",
-//   "Watermelon Ice",
-//   "Miami Vice Sorbet",
-//   "Splish Splash®",
-//   "Wild 'n Reckless Sherbet",
-//   "Lemon Custard",
-//   "Oregon Blackberry",
-//   "Bananas ‘n Strawberries",
-//   "Mississippi Mud",
-//   "Rum Raisin",
-//   "Creole Cream Cheese",
-//   "Chocolate Almond",
-//   "Fudge Brownie",
-//   "Banana Nut",
-//   "Black Walnut",
-//   "Cotton Candy Crackle",
-//   "Quarterback Crunch",
-//   "Chocolate Chocolate Chip Cheesecake",
-//   "Caramel 'n' Cookies"
-// ]
+  if (!check.includes(randomIndexOne)) {
+    check.push(randomIndexOne)
+    getRandom.push(one[randomIndexOne])
+  }
+
+  if (!check.includes(randomIndexTwo)) {
+    check.push(randomIndexTwo)
+    getRandom.push(two[randomIndexTwo])
+  }
+
+  if (!check.includes(randomIndexThree)) {
+    check.push(randomIndexThree)
+    getRandom.push(three[randomIndexThree])
+  }
+
+  if (!check.includes(randomIndexFour)) {
+    check.push(randomIndexFour)
+    getRandom.push(four[randomIndexFour])
+  }
+  }
+
+  return getRandom
+
+} 
+
+
+console.log(`Stretch 2:`, getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors))
+
+
+ //NEW DATA ARRAYS FOR STRETCH 2 ⬇️
+
 
 
 
